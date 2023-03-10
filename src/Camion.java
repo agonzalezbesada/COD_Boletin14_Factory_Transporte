@@ -13,19 +13,19 @@ public class Camion implements Transporte{
 
         if (dimensiones>=8) {
 
-            tipoEmbalaje = 0;
+            tipoEmbalaje = CAJA_MADERA;
             return tipoEmbalaje;
 
         } else {
 
             if (peso<=5) {
 
-                tipoEmbalaje = 1;
+                tipoEmbalaje = ENVOLTORIO_CARTON;
                 return tipoEmbalaje;
 
             } else {
 
-                tipoEmbalaje = 2;
+                tipoEmbalaje = CAJA_MADERA;
                 return tipoEmbalaje;
 
             }
