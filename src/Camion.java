@@ -1,3 +1,8 @@
+/**
+ * Objeto de tipo camión que implementa Transporte
+ * @author Adrián
+ * @version 1.0
+ */
 public class Camion implements Transporte{
     @Override
     public Float costeTotal(Integer cp) {
