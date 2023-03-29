@@ -1,3 +1,8 @@
+/**
+ * Objeto de tipo Bicicleta que implementa Transporte
+ * @author Adrián
+ * @version 1.0
+ */
 public class Bicicleta implements Transporte{
     @Override
     public Float costeTotal(Integer cp) {
@@ -6,25 +11,22 @@ public class Bicicleta implements Transporte{
     }
     @Override
     public Integer tipoEmbalaje(Float x, Float y, Float z, Float peso) {
-
-        Integer tipoEmbalaje = 0;
-
+        /**
+         * Variable que determina las dimensiones
+         */
         Float dimensiones = x + y + z;
 
         if (dimensiones<=8 && peso<=5) {
 
-            tipoEmbalaje = ENVOLTORIO_CARTON;
-            return tipoEmbalaje;
+            return ENVOLTORIO_CARTON;
 
         } else if (dimensiones<=8 && peso>5) {
 
-            tipoEmbalaje = CAJA_MADERA;
-            return tipoEmbalaje;
+            return CAJA_MADERA;
 
         } else if (dimensiones>8 && peso>5) {
 
-            tipoEmbalaje = PALET;
-            return tipoEmbalaje;
+            return PALET;
         }
         return null;
     }
